@@ -98,11 +98,11 @@ _________________________________________________________________
 dense_2 (Dense)              (None, 1)                 513       
 _________________________________________________________________
 
-=================================================================
+
 Total params: 395,889
 Trainable params: 395,889
 Non-trainable params: 0
-=================================================================
+_________________________________________________________________
 
 This network has fewer paramters and hence quicker to train. 
 
@@ -176,3 +176,11 @@ After the collection process, I had 50K number of data points. I split this 80-2
 I finally randomly shuffled the data set and put 20% of the data into a validation set. 
 
 I used this training data for training the model. The validation set helped determine if the model was over or under fitting, although I am not sure that the validation error was giving me meaningful pointer to my final result. I tested weights from several epochs and finally chose the weights from the 36th epoch as ideal.
+
+
+####4. Video files
+I have recorded 2 videos to exhibit the results. The drive.py saves the images fed the the neural network. I have saved that as
+video-1st-person-view.mp4
+
+I also recorded my screen to capture the video of the simluator while my network drove the car. It can be viewed at
+video-3rd-person-view_small.mp4
