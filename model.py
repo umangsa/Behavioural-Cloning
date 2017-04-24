@@ -186,7 +186,7 @@ with open('../data/udacity_driving_log.csv') as csvfile:
 			measurement = float(line[3].strip())
 			if measurement >= 0.0 and measurement <= 0.08:
 				prob = np.random.random()
-				if prob >= 0.80:		
+				if prob >= 0.75:		
 					samples.append(line)
 			elif abs(measurement) > 0.25 and abs(measurement) < 0.5:
 				samples.append(line)
@@ -211,7 +211,8 @@ with K.tf.device('/gpu:0'):
 	model = commaai_model()
 	# model = nvidia_model()
 	print(model.summary())
-	model.compile(loss = 'mse', optimizer=Adam(lr=1e-5))
+	# model.compile(loss = 'mse', optimizer=Adam(lr=1e-5))
+	model.compile(loss = 'mse', optimizer=Adam())
 	model.fit_generator(train_generator, steps_per_epoch = \
 		len(train_samples * 10 )/BATCH_SIZE, validation_data=validation_generator, \
 		validation_steps=len(validation_samples * 10)/BATCH_SIZE, epochs=50, \

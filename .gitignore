@@ -90,3 +90,6 @@ ENV/
 
 # Keras model files
 *.h5
+
+# Mac
+DS_Store
