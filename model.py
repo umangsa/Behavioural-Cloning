@@ -23,7 +23,7 @@ FLAGS = flags.FLAGS
 BATCH_SIZE = 32
 # steering_offset = 0.1595
 steering_offset = 0.25
-translation_offset = 0.01
+translation_offset = 0.02
 
 def get_all_images(sample, lines):
 	#lines = []
