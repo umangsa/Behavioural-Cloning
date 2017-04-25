@@ -96,7 +96,7 @@ dense_2 (Dense)              (None, 1)                 513
 Total params: 395,889
 Trainable params: 395,889
 Non-trainable params: 0
-
+=================================================================
 
 This network has fewer paramters and hence quicker to train. 
 
