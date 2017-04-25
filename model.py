@@ -14,6 +14,7 @@ from keras import regularizers
 from keras.optimizers import Adam
 from keras.callbacks import ModelCheckpoint, Callback
 import keras.backend.tensorflow_backend as K
+from keras.utils import plot_model
 
 from sklearn.utils import shuffle
 from sklearn.model_selection import train_test_split
@@ -216,6 +217,7 @@ with K.tf.device('/gpu:0'):
 	model = commaai_model()
 	# model = nvidia_model()
 	print(model.summary())
+	plot_model(model, to_file='model.png')
 
 	# use Adam optimizer
 	# model.compile(loss = 'mse', optimizer=Adam(lr=1e-5))
